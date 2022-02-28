@@ -20,6 +20,10 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .icon {
@@ -28,13 +32,27 @@ body {
   font-weight: 700;
   background: lavender;
   width: 42px;
-  height: 42px;
+    height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.modal-contents {
+width:423px;
+display:flex;
+flex-flow: column nowrap;
+}
+.header-row {
+display: flex;
+justify-content: space-between;
+font-weight: bold;
+align-items: center;
+font-size: larger;
+}
+.text {
+padding: 5px 0 10px 0;
+}
 .close-button {
   background: #eee;
   border-radius: 50%;
