@@ -27,30 +27,56 @@ function playerPlay () {
 
 function playRound (playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    return "It's a tie! Try again.";
+    console.log("It's a tie! Try again.");
+    let playerPick=playerPlay();
+    let computerPick=computerPlay();
+    playRound(playerPick,computerPick);
   }
   if (playerSelection === 'rock') {
     if (computerSelection === 'scissors') {
-      return 'You win! Rock smashes Scissors!';
+      return 0;
     } else {
-      return 'You lose! Paper covers Rock!';
+      return 1;
     }
   }
   if (playerSelection === 'scissors') {
     if (computerSelection === 'paper') {
-      return 'You win! Scissors cut Paper!';
+      return 2;
     } else {
-      return 'You lose! Rock smashes Scissors!';
+      return 3;
     }
   }
   if (playerSelection === 'paper') {
     if (computerSelection === 'rock') {
-      return 'You win! Paper covers Rock!';
+      return 4;
     } else {
-      return 'You lose! Scissors cut Paper!';
+      return 5;
     }
   }
 }
+const RPSwinLose = ['You win! Rock smashes Scissors!', 'You lose! Paper covers Rock!', 'You win! Scissors cut Paper!', 'You lose! Rock smashes Scissors!','You win! Paper covers Rock!', 'You lose! Scissors cut Paper!']
+function game(){
+var computerScore=0;
+var playerScore=0;
+for (let i=0; i<5; i++){
+var playerSelection = playerPlay ();
+var computerSelection = computerPlay ();
+var match=playRound(playerSelection,computerSelection)
+if (match%2===0){
+playerScore+=1;
+}
+else{
+computerScore+=1;
+}
+console.log(RPSwinLose[match])
+console.log("Player Score: " + playerScore);
+console.log("Computer Score: " + computerScore);
+console.log((i + 1)+ " rounds played out of 5")
+}
+if (playerScore>computerScore){
+console.log('You win the game.  You "rock" at Rock, Paper, Scissors.  You definitely are a "cut" above.')}
+else{
+console.log('You lose.  The computer "rocked" you.  It "cut" you up.')}
+}
+game()
 
-const playerSelection = playerPlay ();
-const computerSelection = computerPlay ();
