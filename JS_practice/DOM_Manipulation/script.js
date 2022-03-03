@@ -16,6 +16,8 @@ h3.style.color='blue';
 
 const divlast = document.createElement('div');
 divlast.classList.add('divlast');
-divlast.innerHTML = "<div><h1>I'm in a div.</h1></div>"
+divlast.innerHTML = "<div><h1>I'm in a div.</h1><p>ME TOO!</p></div>"
+divlast.style="border: 3px solid black; background-color: pink;";
 container.appendChild(content);
 container.appendChild(morecontent)
+container.appendChild(divlast);
