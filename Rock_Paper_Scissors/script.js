@@ -25,7 +25,7 @@ function playerPlay () {
   }
 }
 
-function playRound (playerSelection, computerSelection) {
+function playRound (playerSelection) {
   if (playerSelection === computerSelection) {
     console.log("It's a tie! Try again.");
     let playerPick=playerPlay();
@@ -78,5 +78,6 @@ console.log('You win the game.  You "rock" at Rock, Paper, Scissors.  You defini
 else{
 console.log('You lose.  The computer "rocked" you.  It "cut" you up.')}
 }
-game()
 
+const selections =  Array.from(document.getElementsByClassName('.player_option'));
+selections.forEach(selection => selection.addEventListener('click', console.log(selection)))
