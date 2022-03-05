@@ -11,20 +11,19 @@
     <div id="gameinterface">
 
         <div id="scoreboard">
-            <div id="player_score" class="score"><p>Player:</p></div>
-            <div id="games_player" class="score"><p>Games Played:</p></div>
-            <div id="computer_score" class="'score"><p>Computer:</p></div>
+            <div class="score"><p>Player:</p><p id="player_score"></p></div>
+            <div  class="score"><p>Games Played:</p><p id="games_played"></p></div>
+            <div class="'score"><p>Computer:</p><p  id="computer_score"></p></div>
         </div>
 
         <div id="selections">
-            <div id="player selection"class='selection'></div>
-            <div id="computer_selection"class='selection'></div>
+            <h1>What do you choose to play?</h1>
         </div>
 
         <div id="player_choices">
-            <div class="player_option"><img src="./rock.svg" alt="Rock"/></div>
-            <div class="player_option"><img src="./paper_ball.svg" alt="Paper"/></div>
-            <div class="player_option"><img src="./scissors.svg" alt="Scissors"/></div>
+            <div id="rock_option" class="player_option"><img id="rock_svg" src="./rock.svg" alt="Rock"/></div>
+            <div id="paper_option" class="player_option"><img src="./paper_ball.svg" alt="Paper"/></div>
+            <div id="scissors_option" class="player_option"><img src="./scissors.svg" alt="Scissors"/></div>
         </div>
 
         <div id="winner"></div>
