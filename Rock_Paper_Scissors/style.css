@@ -1,0 +1,115 @@
+body {
+	width: 100%;
+	min-width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background-color: rgb(24, 158, 192);
+	color:white;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+/* #gameinterface {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#scoreboard {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: top;
+	border: 3px solid white;
+	border-radius: 5px;
+	width:50%;
+	padding:5px;
+	margin:5px;
+}
+.score {
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	margin:0;
+}
+.score>p{
+	margin:0;
+}
+#selectionbox {
+	border: 3px solid white;
+	display: flex;
+	flex-direction: column;
+}
+#selections {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+#player_choices {
+	display: flex;
+	flex-flow: row nowrap;
+	width:75%;
+	height: 15%;
+}
+.player_option {
+	width: 120px;
+	height: 120px;
+}
+#computer_selection > img {
+	height:72px;
+} */
+
+#scoreboard, #selectionsbox {
+	display: flex;
+	border: 3px solid white;
+	border-radius: 5px;
+	margin: 10px;
+	padding:5px;
+	justify-content: center;
+	max-width: fit-content;
+}
+
+#scoreboard {
+	flex-flow: row nowrap;
+}
+#selectionsbox {
+	flex-flow: column nowrap;
+}
+.score_info {
+	display: flex;
+	flex-flow: column nowrap;
+	margin:0;
+	padding:5px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+h1, h2, img {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+#selections, #choices {
+	display: flex;
+	flex-flow: row nowrap;
+	padding:5px;
+	justify-content: center;
+	border: none;
+	align-items: center;
+}
+#spacer {
+	width:25px;
+}
+#player_selection, #computer_selection {
+height:72px;
+width: 72px;
+}
+
+#winner {
+	font-size:xx-large;
+	visibility: hidden;
+	white-space: normal;
+	width:700px;
+}

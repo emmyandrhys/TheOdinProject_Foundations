@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
+    <!--
+    <div id="gameinterface">
+        <div id="scoreboard">
+            <div class="score">
+                <p>Player:</p>
+                <p id="player_score">0</p>
+            </div>
+            <div class="score">
+                <p>Games Played:</p>
+                <p id="games_played">0</p>
+            </div>
+            <div class="'score">
+                <p>Computer:</p>
+                <p id="computer_score">0</p>
+            </div>
+        </div>
+
+        <div id="selectionbox">
+            <h1 id="selection_text">What is your choice? Rock, Paper, or Scissors?</h1>
+            <div id="selections">
+                <div id='player_selection'>
+                    <h4>Player Selection</h4>
+                    <h1 id='player_wait'>?</h1>
+                    <img id='player_rock' src="./rock.svg" alt="Rock" style="visibility:hidden" />
+                    <img id='player_paper' src="./paper_ball.svg" alt="Paper" style="visibility:hidden" />
+                    <img id='player_scissors' src="./scissors.svg" alt="Scissors" style="visibility:hidden" />
+                </div>
+                <div id='computer_selection'>
+                    <h4>Computer Selection</h4>
+                    <h1 id='computer_wait'>?</h1>
+                    <img id='computer_rock' src="./rock.svg" alt="Rock" style="visibility:hidden" />
+                    <img id='comouter_paper' src="./paper_ball.svg" alt="Paper" style="visibility:hidden" />
+                    <img id='computer_scissors' src="./scissors.svg" alt="Scissors" style="visibility:hidden" />
+                </div>
+            </div>
+        </div>
+
+        <div id="player_choices">
+            <div id="rock" class="player_option"><img id="rock_svg" src="./rock.svg" alt="Rock" /></div>
+            <div id="paper" class="player_option"><img src="./paper_ball.svg" alt="Paper" /></div>
+            <div id="scissors" class="player_option"><img src="./scissors.svg" alt="Scissors" /></div>
+        </div>
+
+        <div id="winner"></div>
+
+    </div>
+-->
+<div class="game">
+    <div id="scoreboard" class="'contentbox">
+        <div id="player_scoreboard" class="score_info">
+            <h2><br>Your Score:</h2>
+            <h1 id='player_score' class="score">0</h1>
+        </div>
+        <div class='score_info'>
+            <h1 style="visibility:hidden;">space</h1>
+            <h1 id="matches_played">0</h1>
+            <h2>Matches</h2>
+        </div>
+        <div class="score_info">
+            <h2>Computer's<br>Score:</h2>
+            <h1 id="computer_score">0</h1>
+        </div>
+    </div>
+    </div>
+
+    <div id="selectionsbox">
+        <h1 id='selection_text'>What are you going to play?</h1>
+        <div id="selections" class="contentbox">
+            <div class="score_info">
+                <h2>Your Choice:</h2>
+                <img id='player_selection' src="./questionflip.svg"/>
+            </div>
+            <div id="spacer"></div>
+            <div class="score_info">
+                <h2>Computer Choice:</h2>
+                <img id='computer_selection' src="./question.svg"/>
+            </div>
+        </div>
+    </div>
+    <h1 id="winner"></h1>
+<div id="choices">
+    <img id='rock' class='player_option' src="./rock.svg" alt="rock" height="240px" width="240px"/>
+    <img id="paper" class="player_option" src="./paper_ball.svg" alt="paper" height="180px" width="180px"/>
+    <img id="scissors" class="player_option" src="./scissors.svg" alt="scissors" height="240px" width="240px"/>
+
+</div>
+</div>
     <script src="./script.js"></script>
 </body>
+
 </html>
+<!--paper image: Image by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=146279">OpenClipart-Vectors</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=146279">Pixabay</a>
+scissors image: Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=28697">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=28697">Pixabay</a>-->
+
+
+<!--question hand Image by <a href="https://pixabay.com/users/mohamed_hassan-5229782/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6099556">mohamed Hassan</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6099556">Pixabay</a>-->
