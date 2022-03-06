@@ -18,16 +18,22 @@ body {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
-	align-items: center;
+	align-items: top;
 	border: 3px solid white;
+	border-radius: 5px;
 	width:50%;
 	padding:5px;
+	margin:5px;
 }
 
 .score {
 	display: flex;
 	flex-direction: column;
 	align-items: space-between;
+	margin:0;
+}
+.score>p{
+	margin:0;
 }
 #selections {
 	display: flex;
@@ -45,6 +51,14 @@ body {
 .player_option {
 	width: 120px;
 	height: 120px;
+}
+
+#scoreboard, #selections {
+	border: 2px solid white;
+	color:white;
+	font-size: large;
+	Width: 25%;
+	height: 50px;
 }
 
 

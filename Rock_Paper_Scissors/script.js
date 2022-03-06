@@ -28,17 +28,31 @@ function playerPlay() {
   }
 }
 
+const winnerDialog = document.getElementById('winner');
+
+function game() {
+  if (playerScore > computerScore) {
+    winnerDialog.textContent = 'You win the game.  You "rock" at Rock, Paper, Scissors.  You definitely are a "cut" above.'
+  }
+  else {
+    winnerDialog.textContent ='You lose.  The computer "rocked" you.  It "cut" you up.'
+  }
+}
 var wait = true;
 
 var selectiontext = "What is your choice?  Rock, Paper, or Scissors?";
-var playerSvg="";
-var computerSvg="";
-const rockSVG = "<img src='./rock.svg' alt='rock'/>";
-const paperSVG = "<img src='./paper_ball.svg' alt='paper'/>";
-const scissorsSVG = "<img src='./scissors.svg' alt='scissors'/>";
 
 const selectionsBox = document.getElementById("selections");
-const selectionsDisplayed = `<h1>${selectiontext}</h1><div><div id="playerChoice">${playerSvg}</div><div id="computerChoice">${computerSvg}</div></div>`
+
+const playerWait = document.getElementById('player_wait');
+const playerRock = document.getElementById('player_rock');
+const playerPaper = document.getElementById('player_paper');
+const playerScissors = document.getElementById('player_scissors');
+
+const computerWait = document.getElementById('computer_wait');
+const computerRock = document.getElementById('computer_rock');
+const computerPaper = document.getElementById('computer_paper');
+const computerScissors = document.getElementById('computer_scissors');
 
 var computerScore = 0;
 var playerScore = 0;
@@ -52,12 +66,13 @@ const RPSwinLose = ['You win! Rock smashes Scissors!', 'You lose! Paper covers R
 
 function playRound(playerSelection) {
   var computerSelection = computerPlay();
-  if(playerSelection='rock'){playerSvg = rockSVG};
-  if(playerSelection='paper'){playerSvg=paperSVG};
-  if(playerSelection='scissors'){playerSvg=scissorsSVG};
-  if(computerSelection='rock'){computerSvg = rockSVG};
-  if(computerSelection='paper'){computerSvg=paperSVG};
-  if(computerSelection='scissors'){computerSvg=scissorsSVG};
+  playerWait.style.visibility='hidden';
+  if(playerSelection==='rock'){playerRock.style.visibility='visible'};
+  if(playerSelection==='paper'){playerPaper.style.visibility='visible'};
+  if(playerSelection==='scissors'){playerScissors.style.visibility='visible'};
+  if(computerSelection==='rock'){computerRock.style.visibility='visible'};
+  if(computerSelection==='paper'){computerPaper.style.visibility='visible'};
+  if(computerSelection==='scissors'){computerScissors.style.visibility='visible'};
 
   if (playerSelection === computerSelection) {
     selectiontext = "It's a tie.  Try again.";
@@ -71,7 +86,7 @@ function playRound(playerSelection) {
         } else {
       computerScore += 1;
       selectiontext = RPSwinLose[1];
-    } match += 1;
+    } rounds += 1;
   }
   if (playerSelection === 'scissors') {
     if (computerSelection === 'paper') {
@@ -80,7 +95,7 @@ function playRound(playerSelection) {
     } else {
   computerScore += 1;
   selectiontext = RPSwinLose[3];
-} match += 1;
+} rounds += 1;
   }
   if (playerSelection === 'paper') {
     if (computerSelection === 'rock') {
@@ -89,24 +104,19 @@ function playRound(playerSelection) {
         } else {
       computerScore += 1;
       selectiontext = RPSwinLose[5];
-    } match += 1;
+    } rounds += 1;
   }
+  console.log(`Player Score: ${playerScore}`)
+  console.log(`Matches Played: ${rounds}`)
+  console.log(`Computer Score: ${computerScore}`)
 playerScoreDisplay.textContent = `${playerScore}`;
-gamesPlayed.textContent = `${gamesPlayed}`;
+gamesPlayed.textContent = `${rounds}`;
 computerScoreDisplay.textContent = `${computerScore}`;
-if (match = 5){game()}
+if (rounds < 5) {wait=true;}
+if (rounds===5){game()};
 }
 
-const winnerDialog = document.getElementById('winner');
 
-function game() {
-  if (playerScore > computerScore) {
-    winnerDialog.textContent = 'You win the game.  You "rock" at Rock, Paper, Scissors.  You definitely are a "cut" above.'
-  }
-  else {
-    winnerDialog.textContent ='You lose.  The computer "rocked" you.  It "cut" you up.'
-  }
-}
 
 const selections = Array.from(document.getElementsByClassName('player_option'));
-selections.forEach(selection => selection.addEventListener('click', function () { console.log(selection.id);if (wait) { wait = false; playRound(selection.id) } else { return } }))
+selections.forEach(selection => selection.addEventListener('click', function () {if (wait) { wait = false; playRound(selection.id) } else { return } }))
